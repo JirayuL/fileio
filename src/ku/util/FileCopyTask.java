@@ -142,6 +142,7 @@ public class FileCopyTask implements Runnable {
 		// TODO 'Avoid Magic Numbers' - some tasks require a blocksize
 		// for the copy method. Don't write this as a number in the
 		// anonymous class! Use a variable from the outer scope (here).
+		TaskTimer timer = new TaskTimer();
 		final int SIZE_1KB = 1024;
 		final int SIZE_4KB = SIZE_1KB * 4;
 		final int SIZE_64KB = SIZE_1KB * 64;
@@ -162,7 +163,6 @@ public class FileCopyTask implements Runnable {
 		task1.setInput(inputFilename);
 		task1.setOutput("/tmp/filecopy1.txt");
 
-		TaskTimer timer = new TaskTimer();
 		timer.measureAndPrint(task1);
 
 		// TODO Define tasks for the other copy tests you need.

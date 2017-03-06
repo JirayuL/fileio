@@ -1,6 +1,7 @@
 package ku.util;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -52,6 +53,9 @@ public class FileUtil {
 	}
 	
 	static void ccopy(InputStream in, OutputStream out){
+		Reader reader = new InputStreamReader(in);
+		BufferedReader buffer = new BufferedReader(reader);
+		PrintWriter printer = new PrintWriter(out);
 		
 	}
 
